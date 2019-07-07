@@ -12,14 +12,14 @@ def method(request):
 
 def test_friends(method):
         method.session.login(username='evgenikuznecov25@yandex.ru', password='English007')
-        method.friend_requests()
+        method.friends.friend_requests()
 
 
 
 def test_my_group(method):
         method.session.login(username='evgenikuznecov25@yandex.ru', password='English007')
-        method.choice_of_group(name='"SmartBlog <дневник айтишника>"')
-        method.write_post(Parameters(text='Данный пост создан написанной мной программой на '
+        method.group.choice_of_group(name='"SmartBlog <дневник айтишника>"')
+        method.group.write_post(Parameters(text='Данный пост создан написанной мной программой на '
                                         'базе Selenium WebDriver и драйвера Chrome'))
 
 
