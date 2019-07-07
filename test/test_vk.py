@@ -1,5 +1,5 @@
-from parameters import Parameters
-from methods import Methods
+from model.parameters import Parameters
+from fixture.methods import Methods
 import pytest
 
 @pytest.fixture
