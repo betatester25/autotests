@@ -1,6 +1,7 @@
 
 from selenium import webdriver
 from time import sleep
+from fixture.session import SessionHelper
 
 class Methods:
 
@@ -8,6 +9,7 @@ class Methods:
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(30)
         self.driver.get('https://vk.com')
+        self.session = SessionHelper(self)
 
     def friend_requests(self):
         driver = self.driver
@@ -19,13 +21,6 @@ class Methods:
         driver.find_element_by_xpath('//*[@id="friends_tab_out_requests"]/a').click()
         sleep(3)
 
-    def login(self, username, password):
-        driver = self.driver
-        # Авторизация
-        driver.find_element_by_id('index_email').send_keys(username)
-        driver.find_element_by_id('index_pass').send_keys(password)
-        driver.find_element_by_xpath('//button[@class="index_login_button flat_button button_big_text"]').click()
-        sleep(5)
 
     def write_post(self, parameters):
         driver = self.driver
