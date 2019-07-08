@@ -12,4 +12,10 @@ class SessionHelper:
         driver.find_element_by_id('index_email').send_keys(username)
         driver.find_element_by_id('index_pass').send_keys(password)
         driver.find_element_by_xpath('//button[@class="index_login_button flat_button button_big_text"]').click()
-        sleep(5)
+
+
+    def logout(self):
+        driver = self.method.driver
+        driver.find_element_by_id('top_profile_link').click()
+        driver.find_element_by_id('top_logout_link').click()
+
