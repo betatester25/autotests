@@ -3,6 +3,7 @@ from time import sleep
 from fixture.session import SessionHelper
 from fixture.friends import FriendsHelper
 from fixture.group import GroupHelper
+from fixture.my_page import MyPageHelper
 
 
 class Methods:
@@ -14,6 +15,7 @@ class Methods:
         self.session = SessionHelper(self)
         self.friends = FriendsHelper(self)
         self.group = GroupHelper(self)
+        self.my_page = MyPageHelper(self)
 
     def assert_text(self, word):
         driver = self.driver
