@@ -10,11 +10,11 @@ def method(request):
     global fixture
     if fixture is None:
         fixture = Methods()
-        fixture.session.login(username='***', password='****')
+        fixture.session.login(username='*****', password='*****')
     else:
         if not fixture.is_valid():
             fixture = Methods()
-            fixture.session.login(username='evgenikuznecov25@yandex.ru', password='English007')
+            fixture.session.login(username='*****', password='*****')
     return fixture
 
 
