@@ -19,3 +19,5 @@ class SessionHelper:
         driver.find_element_by_id('top_profile_link').click()
         driver.find_element_by_id('top_logout_link').click()
 
+
+
