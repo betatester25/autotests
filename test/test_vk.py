@@ -7,7 +7,7 @@ def test_friends(method):
     method.assert_text(word='Влад Чижов')
 
 
-testdata = [Parameters(name='"SmartBlog <дневник айтишника>"', text='Данный пост создан написанной мной программой на базе Selenium WebDriver и драйвера Chrome применением динамической параметризации (BDD)'),
+testdata = [Parameters(name='"Игровой AliExpress"', text='Я кодер'),
             Parameters(name='"Тестовая группа Pytest"', text='тестовый пост новый')]
 
 
