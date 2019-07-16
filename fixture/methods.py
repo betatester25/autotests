@@ -8,8 +8,13 @@ from fixture.my_page import MyPageHelper
 
 class Methods:
 
-    def __init__(self):
-        self.driver = webdriver.Chrome()
+    def __init__(self, browser):
+        if browser == 'Chrome':
+            self.driver = webdriver.Chrome()
+        elif browser == 'Firefox':
+            self.driver = webdriver.Firefox()
+        else:
+            raise ValueError('Ошибка с выбором браузера')
         self.driver.get('https://vk.com')
         self.driver.implicitly_wait(30)
         self.session = SessionHelper(self)

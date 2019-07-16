@@ -2,7 +2,6 @@ from time import sleep
 from model.parameters import Parameters
 
 
-
 class GroupHelper:
 
     def __init__(self, method):
