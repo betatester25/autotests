@@ -13,7 +13,6 @@ class SessionHelper:
         driver.find_element_by_id('index_pass').send_keys(password)
         driver.find_element_by_xpath('//button[@class="index_login_button flat_button button_big_text"]').click()
 
-
     def logout(self):
         driver = self.method.driver
         driver.find_element_by_id('top_profile_link').click()

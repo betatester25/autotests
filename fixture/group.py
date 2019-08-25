@@ -17,7 +17,7 @@ class GroupHelper:
     def choice_of_group(self, parameters):
         driver = self.method.driver
         # выбор группы
-        driver.find_element_by_xpath('//span[text()="Группы"]').click()
+        driver.find_element_by_xpath('//span[text()="Сообщества"]').click()
         driver.find_element_by_xpath('//a[text()=%s]' % parameters.name).click()
 
     def add_new_group(self, parameters):
@@ -35,7 +35,7 @@ class GroupHelper:
 
     def get_list(self):
         driver = self.method.driver
-        driver.find_element_by_xpath('//span[text()="Группы"]').click()
+        driver.find_element_by_xpath('//span[text()="Сообщества"]').click()
         group_list = []
         for element in driver.find_elements_by_xpath('//a[@class="group_row_title"]'):
             text = element.text
