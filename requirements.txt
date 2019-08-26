@@ -1,4 +1,3 @@
 pytest
 selenium
 lxml-4.4.1-cp38-cp38m-win_amd64.whl
-pytest-allure-adaptor
