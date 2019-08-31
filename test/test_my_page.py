@@ -10,4 +10,5 @@ def test_view_my_foto(method):
 
 
 def test_view_my_message(method):
-    method.my_page.open_my_message()
+    with pytest.allure.step('Открытие раздела "Сообщеия"'):
+        method.my_page.open_my_message()
